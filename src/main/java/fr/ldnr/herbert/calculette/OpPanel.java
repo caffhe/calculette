@@ -1,5 +1,6 @@
 package fr.ldnr.herbert.calculette;
 
+import java.awt.Font;
 import java.awt.GridLayout;
 import java.util.ArrayList;
 import javax.swing.JPanel;
@@ -8,13 +9,16 @@ import javax.swing.JPanel;
 class OpPanel extends JPanel {
 
     private ArrayList<OperationButton> ops;
+    private Font font;
 
-    public OpPanel() {
+    public OpPanel(Font font) {
         ops = new ArrayList<>(6);
+        this.font = font;
         setUp();
     }
 
     private void setUp() {
+        setFont(font);
         setLayout(new GridLayout(3, 0, 5, 5));
         String[] opValues = {"C", "CE",
             "+", "-",
@@ -24,9 +28,9 @@ class OpPanel extends JPanel {
             // Création du bouton
             OperationButton ob;
             if (operation.equals("CE")) {
-                ob = new RedOperationButton(operation);
+                ob = new RedOperationButton(operation, font);
             } else {
-                ob = new OperationButton(operation);
+                ob = new OperationButton(operation, font);
             }
             // Ajout à la liste des boutons à exporter
             ops.add(ob);

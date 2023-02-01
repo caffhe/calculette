@@ -1,8 +1,10 @@
 package fr.ldnr.herbert.calculette;
 
 import java.awt.BorderLayout;
+import java.awt.Font;
 import java.awt.HeadlessException;
 import javax.swing.JFrame;
+import javax.swing.plaf.FontUIResource;
 
 /**
  *
@@ -11,16 +13,27 @@ import javax.swing.JFrame;
 @SuppressWarnings("serial")
 public class MyCalc extends JFrame {
 
+    private int fontSize;
+    private Font font;
     private CalcScreen screen;
     private DigitsPanel digits;
     private OpPanel op;
 
     public MyCalc() {
-        this("Ma calculette");
+        this("Ma calculette", 12);
+    }
+
+    public MyCalc(int fontSize) {
+        this("Ma calculette", fontSize);
     }
 
     public MyCalc(String title) throws HeadlessException {
+        this(title, 12);
+    }
+
+    public MyCalc(String title, int fontSize) {
         super(title);
+        this.fontSize = fontSize;
         setUpAndDisplay();
     }
 
@@ -37,11 +50,14 @@ public class MyCalc extends JFrame {
     }
 
     private void setUpAndDisplay() {
-        setLayout(new BorderLayout(10, 10));
+        font = new FontUIResource("Arial", Font.PLAIN, fontSize);
 
-        digits = new DigitsPanel();
-        op = new OpPanel();
-        screen = new CalcScreen("0");
+        setLayout(new BorderLayout(7, 7));
+
+        digits = new DigitsPanel(font);
+        op = new OpPanel(font);
+        screen = new CalcScreen("0", font);
+
         // Ajout des panneaux de contenu
         add(screen, BorderLayout.NORTH);
         add(digits, BorderLayout.WEST);

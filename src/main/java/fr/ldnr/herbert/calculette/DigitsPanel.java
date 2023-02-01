@@ -1,5 +1,6 @@
 package fr.ldnr.herbert.calculette;
 
+import java.awt.Font;
 import java.awt.GridLayout;
 import java.util.ArrayList;
 import javax.swing.JPanel;
@@ -8,13 +9,16 @@ import javax.swing.JPanel;
 class DigitsPanel extends JPanel {
 
     private ArrayList<DigitButton> digits;
+    private Font font;
 
-    public DigitsPanel() {
+    public DigitsPanel(Font font) {
         digits = new ArrayList<>(12);
+        this.font = font;
         setUp();
     }
 
     private void setUp() {
+        setFont(font);
         setLayout(new GridLayout(4, 0, 5, 5));
         String[] digitValues = {"7", "8", "9",
             "4", "5", "6",
@@ -23,7 +27,7 @@ class DigitsPanel extends JPanel {
         };
         for (String digit : digitValues) {
             // Création du bouton
-            DigitButton db = new DigitButton(digit);
+            DigitButton db = new DigitButton(digit, font);
             // Ajout à la liste des boutons à exporter
             digits.add(db);
             // Ajout au panel
