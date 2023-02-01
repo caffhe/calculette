@@ -1,14 +1,15 @@
-package fr.ldnr.herbert.calculette;
+package GUI;
 
+import java.awt.Color;
 import java.awt.Font;
 import javax.swing.JButton;
 
 @SuppressWarnings("serial")
-class DigitButton extends JButton {
+class OperationButton extends JButton {
 
     private final Font font;
 
-    public DigitButton(String text, Font font) {
+    public OperationButton(String text, Font font) {
         super(text);
         this.font = font;
         setUp();
@@ -16,6 +17,7 @@ class DigitButton extends JButton {
 
     private void setUp() {
         setFont(font);
+        setBackground(Color.WHITE);
     }
 
 }

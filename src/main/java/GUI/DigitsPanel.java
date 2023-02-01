@@ -1,5 +1,6 @@
-package fr.ldnr.herbert.calculette;
+package GUI;
 
+import GUI.DigitButton;
 import java.awt.Font;
 import java.awt.GridLayout;
 import java.util.ArrayList;

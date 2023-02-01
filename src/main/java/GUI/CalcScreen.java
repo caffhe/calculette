@@ -1,4 +1,4 @@
-package fr.ldnr.herbert.calculette;
+package GUI;
 
 import java.awt.Color;
 import java.awt.Font;
@@ -6,7 +6,7 @@ import javax.swing.BorderFactory;
 import javax.swing.JLabel;
 
 @SuppressWarnings("serial")
-class CalcScreen extends JLabel {
+public class CalcScreen extends JLabel {
 
     private final Font font;
 

@@ -3,6 +3,8 @@
 
 package fr.ldnr.herbert.calculette;
 
+import GUI.MyCalc;
+
 /**
  *
  * @author Herbert Caffarel

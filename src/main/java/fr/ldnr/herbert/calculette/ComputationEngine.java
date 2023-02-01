@@ -1,5 +1,7 @@
 package fr.ldnr.herbert.calculette;
 
+import GUI.MyCalc;
+import GUI.CalcScreen;
 import java.awt.event.ActionEvent;
 import java.text.NumberFormat;
 import java.text.ParsePosition;

@@ -1,5 +1,6 @@
-package fr.ldnr.herbert.calculette;
+package GUI;
 
+import GUI.OperationButton;
 import java.awt.Color;
 import java.awt.Font;
 

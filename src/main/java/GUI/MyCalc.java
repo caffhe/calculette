@@ -1,5 +1,8 @@
-package fr.ldnr.herbert.calculette;
+package GUI;
 
+import GUI.DigitsPanel;
+import GUI.CalcScreen;
+import fr.ldnr.herbert.calculette.ComputationEngine;
 import java.awt.BorderLayout;
 import java.awt.Font;
 import javax.swing.JFrame;
