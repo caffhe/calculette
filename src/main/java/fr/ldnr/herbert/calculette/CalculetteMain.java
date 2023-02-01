@@ -10,6 +10,6 @@ package fr.ldnr.herbert.calculette;
 public class CalculetteMain {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        MyCalc mc = new MyCalc();
     }
 }
