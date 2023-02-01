@@ -8,8 +8,8 @@ import javax.swing.JPanel;
 @SuppressWarnings("serial")
 class DigitsPanel extends JPanel {
 
-    private ArrayList<DigitButton> digits;
-    private Font font;
+    private final ArrayList<DigitButton> digits;
+    private final Font font;
 
     public DigitsPanel(Font font) {
         digits = new ArrayList<>(12);

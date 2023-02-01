@@ -8,8 +8,8 @@ import javax.swing.JPanel;
 @SuppressWarnings("serial")
 class OpPanel extends JPanel {
 
-    private ArrayList<OperationButton> ops;
-    private Font font;
+    private final ArrayList<OperationButton> ops;
+    private final Font font;
 
     public OpPanel(Font font) {
         ops = new ArrayList<>(6);

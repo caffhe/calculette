@@ -2,7 +2,6 @@ package fr.ldnr.herbert.calculette;
 
 import java.awt.BorderLayout;
 import java.awt.Font;
-import java.awt.HeadlessException;
 import javax.swing.JFrame;
 import javax.swing.plaf.FontUIResource;
 
@@ -27,7 +26,7 @@ public class MyCalc extends JFrame {
         this("Ma calculette", fontSize);
     }
 
-    public MyCalc(String title) throws HeadlessException {
+    public MyCalc(String title) {
         this(title, 12);
     }
 

@@ -8,7 +8,7 @@ import javax.swing.JLabel;
 @SuppressWarnings("serial")
 class CalcScreen extends JLabel {
 
-    private Font font;
+    private final Font font;
 
     public CalcScreen(String text, Font font) {
         super(text, JLabel.TRAILING);
