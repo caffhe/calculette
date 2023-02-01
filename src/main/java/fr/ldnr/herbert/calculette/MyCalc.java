@@ -17,6 +17,7 @@ public class MyCalc extends JFrame {
     private CalcScreen screen;
     private DigitsPanel digits;
     private OpPanel op;
+    private ComputationEngine computer;
 
     public MyCalc() {
         this("Ma calculette", 12);
@@ -33,6 +34,7 @@ public class MyCalc extends JFrame {
     public MyCalc(String title, int fontSize) {
         super(title);
         this.fontSize = fontSize;
+        this.computer = new ComputationEngine(this);
         setUpAndDisplay();
     }
 
@@ -54,7 +56,13 @@ public class MyCalc extends JFrame {
         setLayout(new BorderLayout(7, 7));
 
         digits = new DigitsPanel(font);
+        digits.getDigits().forEach((digit) -> {
+            digit.addActionListener(computer);
+        });
         op = new OpPanel(font);
+        op.getOps().forEach((op) -> {
+            op.addActionListener(computer);
+        });
         screen = new CalcScreen("0", font);
 
         // Ajout des panneaux de contenu
