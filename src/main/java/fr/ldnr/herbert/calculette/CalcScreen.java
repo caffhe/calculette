@@ -24,4 +24,7 @@ class CalcScreen extends JLabel {
         );
     }
 
+    public void append(String c) {
+        setText(getText() + c);
+    }
 }
