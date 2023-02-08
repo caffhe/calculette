@@ -7,7 +7,7 @@ import javax.swing.JButton;
 @SuppressWarnings("serial")
 class OperationButton extends JButton {
 
-    private final Font font;
+    protected final Font font;
 
     public OperationButton(String text, Font font) {
         super(text);

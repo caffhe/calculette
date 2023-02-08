@@ -1,6 +1,5 @@
 package GUI;
 
-import GUI.OperationButton;
 import java.awt.Color;
 import java.awt.Font;
 
@@ -13,6 +12,6 @@ public class RedOperationButton extends OperationButton {
     }
 
     private void setUp() {
-        setBackground(Color.red);
+        setForeground(Color.red);
     }
 }
